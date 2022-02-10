@@ -1,0 +1,15 @@
+Para este proyecto se crean dos interfaces: Printer y PrinterColor. PrinterColor extiende de Printer 
+
+Las impresoras a blanco y negro implementan Printer 
+
+Las impresoras a color implementan PrinterColor
+
+Se crea una clase de servicio llamada PrinterService. A esta clase se le hace inyeccion de dependencias mediante el constructor. Espera una lista de objetos tipo Printer.
+PrinterService retorna las impresoras a blanco y negro y de color disponibles, para que el usuario elija
+Con el nombre de la impresora elegida, PrinterService busca en la lista de impresoras y si la encuentra, imprime
+
+A futuro si quieren agregar mas tipos de impresoras a color, solo se necesita crear la clase e implementar PrinterColor. Esto no afecta el comportamiento de
+PrinterService porque la clase Principal es la encargada de inyectar la lista de impresoras tipo Printer
+
+En la clase principal se crean dos tipos de impresora a color
+la impresora a blanco y negro no tiene tipo por ende implementa directamente a Printer
